@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+    <head>
+        <title>Lana Sardar's Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!--NAV BAR-->
+        <header>
+            <div class="logo">
+                <img src="images/logo.png" height="100%">
+            </div>
+            <ul class="menu-tabs">
+                <li>Work</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </header>
+
+        <!--HERO SECTION-->
+        <section class="body-content flex-row-container" id="desktop-hero"> <!--id="hero-sect"-->
+            <div id="hero-col-left"> <!--hero-sect-text-->
+                <h1>Hi, I'm Lana Sardar.</h1>
+                <p>I am a software developer turned UI/UX designer based in Chicago. I am passionate about merging my technical expertise in web development with my ability to empathize with and design for real people. In my career, my hopes are to create efficient, accessible digital interfaces that offer an unprecedented user experience. </p>
+                <div class="flex-row-wrap-container" id="button-container">
+                    <button type="button">My Resume</button>
+                    <button type="button" id="connect-btn">Let's Connect!</button>
+                    <!-- <button type="button" id="connect-btn"><a href="#connect">Let's Connect!</a></button> -->
+                </div>
+                
+            </div>
+
+            <div id="hero-col-right">
+                <img src="images/about_me.jpg" height="276px"> 
+            </div>
+        </section>
+
+        <!--HERO SECTION MOBILE-->
+        <section class="body-content flex-column-container" id="mobile-hero"> <!--id="hero-sect"-->
+            <h1>Hi, I'm Lana Sardar.</h1>
+            <p>I am a software developer turned UI/UX designer based in Chicago. I am passionate about merging my technical expertise in web development with my ability to empathize with and design for real people. In my career, my hopes are to create efficient, accessible digital interfaces that offer an unprecedented user experience. </p>
+            <img src="images/about_me.jpg">
+            <button type="button">My Resume</button>
+        </section>
+
+        <hr class="body-content">
+
+        <!--PROJECT GALLERY-->
+        <h2 class="body-content" style="text-align:center;">Recent Work</h2>
+        <section class="body-content flex-row-container" id="project-gallery">
+           
+            <!--Project 1-->
+            <div class="project-card">
+                <div class="project-photos desktop-mobile-overlay">
+                    <img src="images/journeys-desktop-photo.png"  class="project-desktop-photo">
+                    <img src="images/journeys-mobile-photo-small.png"  class="project-mobile-photo-small">
+                </div>
+                <h3>JOURNEYS | The Road Home</h3>
+                <p>Responsive Website Redesign | Quick blurb about the project. Lorem ipsum dolor sit amet consectetur. Leo commodo est faucibus neque sagittis tincidunt suscipit massa tellus.</p>
+            </div>
+
+            <!--Project 2-->
+            <div class="project-card">
+                <div class="project-photos mobile-only">
+                    <img src="images/cup-of-sugar-mobile-photo-large.png" class="project-mobile-photo-large">
+                    <img src="images/cup-of-sugar-2-mobile-photo-large.png" class="project-mobile-photo-large">
+                    <img src="images/cup-of-sugar-3-mobile-photo-large.png" class="project-mobile-photo-large">
+                </div>
+                <h3>Cup of Sugar</h3>
+                <p>Mobile App Case Study | Quick blurb about the project. Lorem ipsum dolor sit amet consectetur. Leo commodo est faucibus neque sagittis tincidunt suscipit massa tellus.</p>
+            </div>
+
+            <!--Project 3-->
+            <div class="project-card">
+                <div class="project-photos mobile-only">
+                    <img src="images/encompass-mobile-photo-large.png" class="project-mobile-photo-large">
+                    <img src="images/encompass-2-mobile-photo-large.png" class="project-mobile-photo-large">
+                    <img src="images/encompass-3-mobile-photo-large.png" class="project-mobile-photo-large">
+                </div>
+                <h3>enCompass</h3>
+                <p>Mobile App Case Study | Quick blurb about the project. Lorem ipsum dolor sit amet consectetur. Leo commodo est faucibus neque sagittis tincidunt suscipit massa tellus.</p>
+            </div>
+        </section>
+        <!--END PROJECT GALLERY-->
+
+        <hr class="body-content">
+
+        <!--LETS CONNECT-->
+        <section class="body-content flex-centered" >
+            <div id="connect">
+                <h2>Let's Connect!</h2>
+                <form>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name"><br>
+                    <label for="email">Email:</label><br>
+                    <input type="text" id="email" name="email"><br>
+                    <label for="message">Message:</label><br>
+                    <textarea name="message" placeholder="Write something..."></textarea><br>
+                    <input id="submit-btn" type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
+
+        <!--FOOTER-->
+        <footer>
+            <div id="footer-content">
+                <h5>Contact</h5>
+                <p>(847) 987-5187</p>
+                <p>lanaysardar@gmail.com</p>
+                <a href="www.linkedin.com/in/lana-sardar">LinkedIn</a>
+            </div>
+            
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

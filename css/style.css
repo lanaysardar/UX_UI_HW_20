@@ -1,0 +1,432 @@
+/* TO DO:
+- create a single class for flex containers with flex-direction:row and one for flex-direction:column 
+
+*/
+/*COLOR PALETTE VARIABLES*/
+:root{
+    --backgroundWhite: #FFFBEE;
+    --textBlack: #2f292a;
+    --red: #CD422D;
+    --pink:#FADDDD;
+
+    --lightYellow:#EAC449 ;
+    --yellow: #CCAE4D;
+    --darkYellow: #AF902D;
+
+    --lightBlue: #C8E2E8;
+    --blue:#88A3A9 ;
+    --darkBlue: #426770;
+
+}
+
+
+body{
+    background-color: var(--backgroundWhite);
+    color: var(--textBlack);
+    margin:0px;
+
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size:16px;
+}
+
+/*TYPOGRAPHY*/
+h1, h2, h3, h4, h5, button, #submit-btn{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+h1, h2, h3, h4, h5{
+    margin: 0px 0px 20px 0px;
+}
+h1{
+    font-size: 48px;
+    margin: 0px 0px 20px 0px;
+}
+h2{
+    font-size: 40px;
+}
+h3{
+    font-size: 32px;
+}
+h4{
+    font-size: 24px;
+}
+h5, button, #submit-btn{
+    font-size: 20px;
+}
+p{
+    margin:0px;
+}
+
+/*FLEX CONTAINER CLASSES*/
+.flex-row-container{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-column-container{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-content: space-between;
+}
+.flex-row-wrap-container{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.flex-centered{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/*GRID CONTAINER CLASSES*/
+
+
+/*NAV BAR STYLING & LAYOUT*/
+header{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    height:80px;
+    width:100%;
+    box-shadow:0px 4px 5px rgba(51, 46, 46, 0.15);
+    /* position:fixed; */
+}
+
+.logo{
+    height:50px;
+    padding:0px;
+    margin:0px 25px;
+}
+
+.menu-tabs{
+    display:flex;
+    width:calc(100%-50px);
+    justify-content:flex-end;
+    list-style-type: none;
+    margin:0px 25px;
+    padding:0px;
+}
+
+.menu-tabs li{
+    padding:0px 0px 0px 25px;
+    font-size: 20px;
+    font-family: "Playfair Display", serif;
+    font-weight:600;
+}
+
+/* APPLY THIS CLASS TO EACH SEPARATE SECTIONS WITHIN BODY (not footer or header) */
+.body-content{
+    margin:50px 150px;
+    width:calc(100%-300px);
+    max-width: 1140px;
+
+}
+/* #hero-sect{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between; 
+    align-items:center;
+} */
+
+/*HERO SECTION*/
+/* button:hover{
+    cursor: pointer;
+} */
+#hero-col-left{
+    /* margin:0px 20px 0px 0px; */
+    margin-right: 20px;
+}
+
+#hero-col-left p{
+    margin:0px 0px 30px 0px;
+}
+
+#hero-col-left button, #submit-btn{
+    background-color: var(--lightBlue);
+    color: var(--darkBlue);
+    width:40%;
+    height:45px;
+    margin-right:20px;
+    min-width: 200px;
+    text-align: center;
+    border-radius: 10px;
+    border:2px solid var(--darkBlue);
+    box-shadow:4px 4px 4px rgba(51, 46, 46, 0.25);
+}
+#hero-col-left button:hover, #submit-btn:hover{
+    cursor:pointer;
+    background-color:#d0f6ff;
+}
+
+#hero-col-right img{
+    /* height:280px - 4px; width of parent div minus width of surrounding images borders */
+    border-radius: 20px;
+    border:2px solid var(--darkBlue);
+    box-shadow:4px 4px 4px rgba(51, 46, 46, 0.25);
+}
+
+#mobile-hero{
+    display:none;
+}
+
+hr{
+    border-top: 2px solid var(--yellow);
+}
+
+/*PROJECT GALLERY*/
+#project-gallery{
+    flex-wrap:wrap;
+}
+
+.project-card{
+    width:463px;
+    margin-bottom:100px;
+}
+
+.project-photos{
+    height:301px;
+    margin-bottom:20px;
+}
+
+.project-photos img{
+    border:2px solid var(--darkBlue);
+    box-shadow:4px 4px 4px rgba(51, 46, 46, 0.25);
+}
+
+.desktop-mobile-overlay{
+    position:relative;
+}
+
+/*this class could be removed by listing it with the already existing flex-row-contianer class*/
+.mobile-only{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.desktop-mobile-overlay img{
+    position: absolute;
+}
+
+
+.project-desktop-photo{
+    height:275px;
+    top:0px;
+    left:0px;
+
+    border-radius: 12px;
+}
+
+.project-mobile-photo-small{
+    height:234px;
+    bottom:0px;
+    right:0px;
+
+    border-radius: 15px;
+}
+
+.project-mobile-photo-large{
+    height:297px;
+    border-radius:20px;
+}
+
+
+/*LETS CONNECT*/
+#connect{
+    /* display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;; */
+    padding:20px;
+    width:75%;
+    max-width: 500px;
+    /* background-color: var(--lightBlue); */
+    border-radius: 20px;
+    border:2px solid var(--darkBlue);
+    box-shadow:4px 4px 4px rgba(51, 46, 46, 0.25);
+}
+#connect h2{
+    text-align: center;
+}
+form{
+    text-align:left;
+}
+
+form input, form textarea{
+    margin-bottom:20px;
+    width:calc(100% - 4px);
+    height:30px;
+    border-radius:10px;
+    border:2px solid var(--darkBlue);
+    background-color: var(--backgroundWhite);
+}
+
+form textarea{
+    height:50px;
+    padding:10px;
+    width: calc(100% - 24px);
+}
+
+#submit-btn{
+    width:100%;
+}
+
+
+
+
+/*FOOTER*/
+footer{
+    background-color:var(--darkBlue);
+    color: var(--backgroundWhite);
+    padding:50px 0px;
+}
+ 
+#footer-content{
+    margin:0px 150px;
+    width:calc(100%-300px);
+    max-width: 1140px;
+}
+
+#footer-content a{
+    color:var(--backgroundWhite);
+}
+
+/*PHONE SCREENS*/
+@media screen and (max-width:500px){
+
+    /*TYPOGRAPHY*/
+    h1{
+        font-size: 34px;
+        margin: 0px 0px 15px 0px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 26px;
+    }
+    h4{
+        font-size: 22px;
+    }
+    h5, button{
+        font-size: 18px;
+    }
+
+    /*NAV BAR STYLING & LAYOUT*/
+    header{
+        height:65px;
+    }
+
+    .logo{
+        height:45px;
+        padding:0px;
+        margin:0px 16px;
+    }
+
+    .menu-tabs li{
+        padding:0px 0px 0px 25px;
+        font-size: 18px;
+        font-family: "Playfair Display", serif;
+        font-weight:600;
+    }
+
+    /*Class applied to every body section besides header/footer*/
+    .body-content{
+        margin:30px 16px;
+        width:calc(100% - 32px);
+        /* max-width: 1140px; */
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    
+    }
+
+    /*HERO SECTION*/
+
+    #desktop-hero{
+        display:none;
+    }
+
+    #mobile-hero{
+        display:flex;
+    }
+    #mobile-hero h1{
+        width:100%;
+        text-align:left;
+        margin:0px 0px 15px 0px;
+    }
+    #mobile-hero p{
+        margin:0px 0px 15px 0px;
+    }
+    #mobile-hero img{
+        margin:15px auto;
+        width:75%;
+        border-radius: 20px;
+        border:2px solid var(--darkBlue);
+        box-shadow:4px 4px 4px rgba(51, 46, 46, 0.25);
+    }
+
+    #mobile-hero button{
+        background-color: var(--lightBlue);
+        color: var(--darkBlue);
+        width:100%;
+        height:45px;
+        text-align: center;
+        border-radius: 10px;
+        border:2px solid var(--darkBlue);
+        box-shadow:4px 4px 4px rgba(51, 46, 46, 0.25);
+
+    }
+
+    h2{
+        width:100%;
+    }
+
+    /*PROJECT GALLERY*/
+    .project-card{
+        width:100%;
+        max-width:400px;
+        margin-bottom:60px;
+
+    }
+
+    .project-photos{
+        margin-bottom:15px;
+        height:250px;
+    }
+
+    .project-desktop-photo{
+        /* height:215px; */
+        width:80%;
+        height:auto;
+    }
+
+    .project-mobile-photo-small{
+        /* height:215px; */
+        width:25%;
+        height:auto;
+    }
+    
+    .project-mobile-photo-large{
+        width:30%;
+        height:auto;
+    }
+
+    /*FOOTER*/
+    #footer-content{
+        margin:0px 16px;
+        width:calc(100%-32px);
+    }
+
+}
