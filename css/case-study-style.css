@@ -32,8 +32,8 @@ h1, h2, h3, h4, h5, button, #submit-btn, a{
     font-weight: 600;
     font-style: normal;
 }
-h1, h2, h3, h4, h5{
-    margin: 0px 0px 20px 0px;
+h1, h2, h3, h4, h5, p{
+    margin: 0px;
 }
 h1{
     font-size: 48px;
@@ -43,16 +43,16 @@ h2{
 }
 h3{
     font-size: 32px;
+    margin-bottom:15px;
 }
 h4{
     font-size: 24px;
+    margin-bottom:15px;
 }
 h5, button, #submit-btn, a{
     font-size: 20px;
 }
-p{
-    margin:0px;
-}
+
 .caption{
     font-family: "Dosis", sans-serif;
     font-optical-sizing: auto;
@@ -111,8 +111,7 @@ footer{
 
 hr{
     border-top: 2px solid var(--yellow);
-    width:100%;
-    margin-top:50px;
+    margin-bottom:0px;
 }
 /*END COPIED OVER STYLING*/
 
@@ -139,6 +138,8 @@ hr{
     flex-direction:column;
     justify-content: flex-start;
     align-items: flex-start;
+
+    width:100%;
 }
 
 /* .content-section{
@@ -146,37 +147,31 @@ hr{
     margin:50px 0px;
     background-color: rgb(202, 202, 255);
 } */
+
+/*2 COLUMN CONTAINER*/
 .grid-container-2-col{
     display:grid;
     grid-template-columns: 5fr 20px 7fr;
     grid-template-rows: auto;
     grid-template-areas: 
     "left-col disabled right-col";
-
-    width:100%;
-    margin:50px 0px 0px 0px;
+    /* width:100%;
+    margin:50px 0px 0px 0px; */
 }
-
 .left-col{
     grid-area: left-col;
 }
-
 .right-col{
     grid-area: right-col;
 }
-
 .right-col img{
     width:100%;
-
     border-radius: 5%;
     border:1px solid var(--textBlack);
     box-shadow:4px 4px 4px rgba(51, 46, 46, 0.25);
 }
 
-.right-col p{
-    margin-bottom:20px;
-}
-
+/*IN PAGE NAVIGATION*/
 #in-page-nav{
     width:100%;
     height:75px;
@@ -185,22 +180,45 @@ hr{
     justify-content: space-around;
     align-items: center;
 }
-
 #in-page-nav a{
     color:var(--backgroundWhite);
     text-decoration: none;
 }
-
 #in-page-nav a:hover{
     text-decoration: underline;
 }
 
-.centered{
-    text-align: center;
-    /* width:100%; */
-    margin:50px auto 0px auto;
+ul{
+    margin:0px;
 }
 
-.body-content img{
+/* .body-content img{
     margin:30px auto 0px auto;
+} */
+
+/*For standalone images that are centered (like affinity diagram screenshots) */
+/* .centered-img{
+    margin:30px auto 0px auto;
+} */
+
+.main-section{
+    width:100%;
+    /* margin-top:50px; */
+    margin:50px 0px 0px 0px;
 }
+
+.sub-section{
+    margin-top:30px;
+}
+
+.s-s-internal-spacing{
+    margin-top:15px;
+}
+
+.centered{
+    /* text-align: center; */
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
